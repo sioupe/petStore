@@ -73,12 +73,21 @@ public class PetStore {
         return animaux;
     }
 
+    /**
+     * fonction de rajout d'un produit dans petStore
+     * @param produit
+     */
     public void addProduit(Produit produit){
         produits.add(produit);
         if (!produit.getPetStores().contains(this)) {
             produit.addPetStore(this);
         }
     }
+
+    /**
+     * suppression d'un produit de petStore
+     * @param produit
+     */
     public void removeProduit(Produit produit){
         produits.remove(produit);
         if (!produit.getPetStores().contains(this)) {
