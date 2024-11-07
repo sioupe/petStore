@@ -1,7 +1,8 @@
 package fr.diginamic.entite;
 
 import jakarta.persistence.*;
-
+@Entity
+@Table (name = "pet_store")
 public class PetStore {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

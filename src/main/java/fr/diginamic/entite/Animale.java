@@ -1,12 +1,11 @@
 package fr.diginamic.entite;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
-
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "animale")
 public class Animale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
