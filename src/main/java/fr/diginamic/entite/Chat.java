@@ -10,4 +10,8 @@ public class Chat extends Animale{
 
     @Column(name ="CHIP_ID")
     private String chipId;
+
+    public Chat() {
+        super();
+    }
 }
