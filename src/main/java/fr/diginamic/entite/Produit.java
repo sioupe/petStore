@@ -7,7 +7,8 @@ import org.checkerframework.checker.units.qual.C;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-
+0
+@Entity
 public class Produit  implements Serializable {
     /**identifiant du produit*/
     @Id
