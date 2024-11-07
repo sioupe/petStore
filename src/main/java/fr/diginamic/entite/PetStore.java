@@ -22,7 +22,7 @@ public class PetStore {
     @Embedded
     private Adresse adresse;
 
-    /**listes desproduits du shop*/
+    /**listes des produits du shop*/
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "possede",
             joinColumns = @JoinColumn(name = "ID_PET_STORE",referencedColumnName="ID"),
