@@ -30,7 +30,7 @@ public class Animale {
     }
 
     /**
-     * constructeur vide
+     * constructeur parametre
      * @param naissance
      * @param couleur
      * @param petstore
