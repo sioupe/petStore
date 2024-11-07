@@ -10,6 +10,7 @@ public class Animale {
     /**id de l'animal*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name ="ID")
     private Long id;
     /**date de naissance de l'animale*/
     @Column(name ="NAISSANCE")

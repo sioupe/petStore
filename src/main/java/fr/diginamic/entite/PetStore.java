@@ -11,6 +11,7 @@ public class PetStore {
     /**id du shop*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     /**nom du shop*/
     @Column(name ="NOM")
