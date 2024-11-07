@@ -31,7 +31,7 @@ public class PetStore {
     private Set<Produit> produits;
 
     /**listes des animaux du shop*/
-    @OneToMany(mappedBy = "petStore",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "petStores",cascade = CascadeType.PERSIST)
     private Set<Animale>animaux;
 
     {

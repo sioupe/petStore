@@ -21,7 +21,7 @@ public class Animale {
     /**shop qui possede l'animal*/
     @ManyToOne
     @JoinColumn(name="ID_PET_STORE")
-    private PetStore petstore;
+    private PetStore petStore;
 
     /**
      * constructeur vide
@@ -49,12 +49,12 @@ public class Animale {
 
 
     public void setPetstore(PetStore petstore) {
-        if(this.petstore != null){
-            this.petstore.getAnimaux().remove(this);
+        if(this.petStore != null){
+            this.petStore.getAnimaux().remove(this);
         }
-        this.petstore = petstore;
-        if (this.petstore == null) {
-            this.petstore.getAnimaux().add(this);
+        this.petStore = petstore;
+        if (this.petStore == null) {
+            this.petStore.getAnimaux().add(this);
         }
     }
 }
