@@ -8,9 +8,13 @@ import jakarta.persistence.Table;
 @Table(name = "chat")
 public class Chat extends Animale{
 
+    /**id du chip du chat*/
     @Column(name ="CHIP_ID")
     private String chipId;
 
+    /**
+     * constructeur vide
+     */
     public Chat() {
         super();
     }
