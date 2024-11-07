@@ -23,6 +23,7 @@ public class Produit  implements Serializable {
     @Column(name ="LABEL")
     private String label;
     /**type du produit*/
+    @Enumerated(EnumType.STRING)
     @Column(name ="PROD_TYPE")
     private ProdType type;
     /** prix du produit*/
