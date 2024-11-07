@@ -8,16 +8,21 @@ import java.util.Set;
 @Entity
 @Table (name = "pet_store")
 public class PetStore {
+    /**id du shop*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    /**nom du shop*/
     @Column(name ="NOM")
     private String nom;
+    /**nom du manager du shop*/
     @Column(name ="NOM_MANAGER")
     private String nomManager;
+    /**adresse du shop*/
     @Embedded
     private Adresse adresse;
 
+    /**listes desproduits du shop*/
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "possede",
             joinColumns = @JoinColumn(name = "ID_PET_STORE",referencedColumnName="ID"),
@@ -25,6 +30,7 @@ public class PetStore {
     )
     private Set<Produit> produits;
 
+    /**listes des animaux du shop*/
     @OneToMany(mappedBy = "petStore",cascade = CascadeType.PERSIST)
     private Set<Animale>animaux;
 
@@ -33,9 +39,19 @@ public class PetStore {
         animaux=new HashSet<Animale>();
 
     }
+
+    /**
+     * constructeur vide
+     */
     public PetStore() {
     }
 
+    /**
+     * construteur parametre
+     * @param nom
+     * @param nomManager
+     * @param adresse
+     */
     public PetStore(String nom, String nomManager, Adresse adresse) {
         this.nom = nom;
         this.nomManager = nomManager;
