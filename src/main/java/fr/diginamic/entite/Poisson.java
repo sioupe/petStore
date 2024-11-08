@@ -34,4 +34,13 @@ public class Poisson extends Animale{
         super(naissance, couleur, petstore);
         this.livingEnv = livingEnv;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Poisson{");
+        sb.append(super.toString());
+        sb.append("livingEnv=").append(livingEnv);
+        sb.append("}\n");
+        return sb.toString();
+    }
 }

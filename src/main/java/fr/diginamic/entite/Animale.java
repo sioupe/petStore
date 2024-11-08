@@ -62,4 +62,16 @@ public class Animale {
             this.petStore.getAnimaux().add(this);
         }
     }
+
+    /**
+     * affichage des données d'un animale
+     * @return
+     */
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("naissance=");
+        sb.append(", couleur='").append(couleur).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

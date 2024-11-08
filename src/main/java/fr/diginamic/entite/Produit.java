@@ -96,4 +96,17 @@ public class Produit  implements Serializable {
             petStore.removeProduit(this);
         }
     }
+    /**
+     * affichage des données d'un produit
+     */
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Produit{");
+        sb.append("code='").append(code).append('\'');
+        sb.append(", label='").append(label).append('\'');
+        sb.append(", type=").append(type);
+        sb.append(", prix=").append(prix);
+        sb.append('}');
+        return sb.toString();
+    }
 }

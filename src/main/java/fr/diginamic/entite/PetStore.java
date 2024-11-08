@@ -63,6 +63,16 @@ public class PetStore {
     }
 
     /**
+     * Getter
+     *
+     * @return nom
+     */
+
+    public String getNom() {
+        return nom;
+    }
+
+    /**
      * Setter
      *
      * @param animale animale
@@ -113,5 +123,19 @@ public class PetStore {
         if (!produit.getPetStores().contains(this)) {
             produit.removePetStore(this);
         }
+    }
+
+    /**
+     * affichage des données d'un shop
+     * @return
+     */
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("PetStore{");
+        sb.append("nom='").append(nom).append('\'');
+        sb.append(", nomManager='").append(nomManager).append('\'');
+        sb.append(", adresse=").append(adresse);
+        sb.append('}');
+        return sb.toString();
     }
 }

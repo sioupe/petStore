@@ -35,4 +35,17 @@ public class Chat extends Animale{
         super(naissance, couleur, petstore);
         this.chipId = chipId;
     }
+
+    /**
+     * affiche les donnée d'un chat
+     * @return
+     */
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Chat{");
+        sb.append(super.toString());
+        sb.append("chipId='").append(chipId).append('\'');
+        sb.append("}\n");
+        return sb.toString();
+    }
 }

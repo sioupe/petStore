@@ -7,8 +7,11 @@ import fr.diginamic.enumeration.ProdType;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.TypedQuery;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Scanner;
 
 public class app {
     public static void main(String[] args) {
@@ -40,11 +43,28 @@ public class app {
         em.persist(poisson1);
         em.persist(poisson2);
         em.persist(poisson3);
-
+        Scanner scanner =new Scanner(System.in);
+        String choix ="";
+        while (choix.isEmpty()) {
+            System.out.println("choisi entre :\n\t 1."+shop1.getNom()+" \n\t 2."+shop2.getNom()+"\n\t 3."+shop3.getNom());
+            switch (scanner.nextInt()) {
+                case 1:
+                    choix = shop1.getNom();
+                case 2:
+                    choix = shop2.getNom();
+                case 3:
+                    choix = shop3.getNom();
+                default:
+                    System.out.println("choisie parmis les trois proposition avec le numero ecrit au debut du choix");
+            }
+        }
+        TypedQuery<Animale> query= em.createQuery("select a From Animale a where a.petStore.nom= :choix", Animale.class);//requete pour trouver les animaux du magasin maxizoo
+        query.setParameter("choix",choix);//requete pour modifier le parametre : choix et permettre le choix par l'utilisateur
+        List<Animale> animales= query.getResultList();
 
 
         em.getTransaction().commit();
-
+        System.out.println(animales);
 
 
 
