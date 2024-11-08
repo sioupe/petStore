@@ -24,7 +24,7 @@ public class Animale {
     private String couleur;
 
     /**shop qui possede l'animal*/
-    @ManyToOne
+    @ManyToOne (cascade = CascadeType.PERSIST)
     @JoinColumn(name="ID_PET_STORE")
     private PetStore petStore;
 
