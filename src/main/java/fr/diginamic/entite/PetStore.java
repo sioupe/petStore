@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * la table representant un shop
+ */
 @Entity
 @Table (name = "pet_store")
 public class PetStore {

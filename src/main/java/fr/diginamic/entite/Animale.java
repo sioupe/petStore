@@ -3,6 +3,10 @@ package fr.diginamic.entite;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+
+/**
+ * la table des animaux achetable dans un shop
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "animale")

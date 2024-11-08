@@ -8,6 +8,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * representation des different produit existant
+ */
 @Entity
 @Table(name = "produit")
 public class Produit  implements Serializable {

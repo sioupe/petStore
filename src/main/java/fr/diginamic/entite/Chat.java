@@ -6,6 +6,9 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDate;
 
+/**
+ * representation d'un chat
+ */
 @Entity
 @Table(name = "chat")
 public class Chat extends Animale{

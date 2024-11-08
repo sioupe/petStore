@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+/**
+ * representation d'un poisson
+ */
 @Entity
 @Table(name = "poisson")
 public class Poisson extends Animale{
