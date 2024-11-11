@@ -1,7 +1,7 @@
 
 Guillen Johan
 
-il faut pour le projet verifier qu'iul y a bien les depence de la bdd utiliser et hibernate
+il faut pour le projet verifier qu'il y a bien les depence de la bdd utiliser et hibernate
 et faire sont fichier de persistence avec comme nom de l'unite de persistence "shop" l'option de transaction type
 set a cette valeur <persistence-unit name="shop" transaction-type="RESOURCE_LOCAL">
 
