@@ -59,7 +59,7 @@ public class app {
             }
         }
         TypedQuery<Animale> query= em.createQuery("select a From Animale a where a.petStore.nom= :choix", Animale.class);//requete pour trouver les animaux du magasin maxizoo
-        query.setParameter("choix",choix);//requete pour modifier le parametre : choix et permettre le choix par l'utilisateur
+        query.setParameter("choix",choix);//requete pour modifier le parametre : choix et permettre le choix par l'utilisateur_
         List<Animale> animales= query.getResultList();
 
 
